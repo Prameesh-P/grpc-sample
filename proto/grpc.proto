@@ -1,0 +1,17 @@
+syntax="proto3";
+
+option go_package = "github.com/Prameesh-P/grpc-sample/proto";
+
+package grpc_service ;
+
+service GrpcService{
+    rpc SayHello(NoParam) returns (HelloResponse);  // unary
+    rpc SayHelloServerSideStreaming(NamesList) returns (stream HelloResponse); //server side streaming
+
+}
+
+message NoParam{};
+
+message HelloResponse{
+    string message = 1;
+}
