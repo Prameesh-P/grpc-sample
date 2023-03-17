@@ -1,6 +1,6 @@
 syntax="proto3";
 
-option go_package = "github.com/Prameesh-P/grpc-sample/proto";
+option go_package = "./proto";
 
 package grpc_service ;
 
@@ -12,7 +12,7 @@ service GrpcService{
 
     rpc SayHelloClientStreaming(stream HelloRequest) returns (MessagesList); //client side streaming 
 
-    rpc SayHelloBidirectionalStreaming(stram HelloRequest) returns (stream HelloResponse); //bidirectional streaming 
+    rpc SayHelloBidirectionalStreaming(stream HelloRequest) returns (stream HelloResponse); //bidirectional streaming 
 
 }
 
