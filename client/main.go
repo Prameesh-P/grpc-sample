@@ -28,10 +28,16 @@ func main() {
 			"Prameesh",
 			"Nirmal",
 			"Abindas",
+			"Athul",
+			"Karthik",
+			"Shamil",
+			"Vaishnav",
+			"Dheeraj",
 		},
 	}
 
 	// callSayHello(client)
 	// callSayHelloServerStreaming(client,names)
-	callSayHelloClientStream(client,names)
+	// callSayHelloClientStream(client,names)
+	callSayHelloBidirectionalStream(client,names)
 }

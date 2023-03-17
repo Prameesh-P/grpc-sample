@@ -22,7 +22,7 @@ func callSayHelloClientStream(client pb.GrpcServiceClient,names *pb.NamesList){
 		if err := stream.Send(req);err!=nil{
 			log.Fatalf("Could not send the request got an error %v",err)
 		}
-		time.Sleep(2*time.Second)
+		time.Sleep(time.Second)
 	}
 	res,err:=stream.CloseAndRecv()
 	log.Printf("Client streaming is finished ")
