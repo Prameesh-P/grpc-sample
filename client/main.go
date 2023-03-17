@@ -18,10 +18,19 @@ func main() {
 	if err !=nil{
 			log.Fatalf("Can't connect..!!! got error %v ",err)
 	}
-	
+
 	defer conn.Close()
 
 	client := pb.NewGrpcServiceClient(conn)
 
-	callSayHello(client)
+	names:= &pb.NamesList{
+		Names: []string{
+			"Prameesh",
+			"Nirmal",
+			"Abindas",
+		},
+	}
+
+	// callSayHello(client)
+	callSayHelloServerStream(client,names)
 }
