@@ -1,4 +1,4 @@
-package server
+package main
 
 import (
 	"log"
@@ -17,6 +17,7 @@ type helloServer struct{
 }
 
 func main() {
+
 	lis, err := net.Listen("tcp",port)
 
 	if err != nil{
